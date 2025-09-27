@@ -1,11 +1,18 @@
 from pymongo import MongoClient
 from bson import ObjectId
+from dotenv import load_dotenv
+import os
 
-client = MongoClient("mongodb+srv://pratham:pratham@pratham.tf9lc0a.mongodb.net/?retryWrites=true&w=majority&appName=Pratham", tlsAllowInvalidCertificates=True)
+load_dotenv()
+
+MONGODB_URI = os.getenv("MONGODB_URI")
+
+client = MongoClient(MONGODB_URI, tlsAllowInvalidCertificates=True)
 # Not a good idea to include id and password in code files
 #  tlsAllowInvalidCertificates=True - Not a good way to handle ssl
 
-print(client)
+# print(client)
+
 db = client["ytmanager"]
 video_collection = db["videos"]
 
