@@ -4,7 +4,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Projects](https://img.shields.io/badge/Projects-10-orange.svg)
+![Projects](https://img.shields.io/badge/Projects-11-orange.svg)
 ![Status](https://img.shields.io/badge/Status-Active-success.svg)
 
 _A curated collection of Python projects showcasing automation, AI, multimedia processing, and practical utilities_
@@ -26,6 +26,7 @@ _A curated collection of Python projects showcasing automation, AI, multimedia p
 - [🎬 ASCII Video Player](#-ascii-video-player)
 - [🤖 AI Task Agent](#-ai-task-agent)
 - [🗄️ Python MongoDB Integration](#️-python-mongodb-integration)
+- [📝 FastAPI Notes App](#-fastapi-notes-app)
 - [✨ Doctor Strange Hand Gestures](#-doctor-strange-hand-gestures)
 
 ---
@@ -294,6 +295,66 @@ python main.py
 
 ---
 
+### 📝 FastAPI Notes App
+
+> Full-stack notes application with FastAPI backend and vanilla JavaScript frontend
+
+```bash
+📂 fastapi-notes/
+├── main.py
+├── database.py
+├── models.py
+├── schemas.py
+├── index.html
+├── requirements.txt
+├── .env
+└── .env.example
+```
+
+**Features:**
+
+- RESTful API with FastAPI
+- MongoDB Atlas integration for cloud storage
+- CRUD operations (Create, Read, Update, Delete)
+- Single-page application with vanilla JavaScript
+- Modern UI with Tailwind CSS
+- Dark mode support
+- Real-time search functionality
+- Toast notifications
+- Responsive design
+
+**Setup:**
+
+```bash
+cd fastapi-notes
+cp .env.example .env
+# Edit .env with your MongoDB Atlas credentials
+pip install -r requirements.txt
+```
+
+**Run:**
+
+```bash
+# Start the FastAPI server
+uvicorn main:app --reload
+
+# Open index.html in your browser or serve it with:
+python -m http.server 8080
+# Then visit http://localhost:8080
+```
+
+**API Endpoints:**
+
+- `POST /notes/` - Create a new note
+- `GET /notes/` - Get all notes
+- `GET /notes/{note_id}` - Get a specific note
+- `PUT /notes/{note_id}` - Update a note
+- `DELETE /notes/{note_id}` - Delete a note
+
+**Tech:** `fastapi`, `uvicorn`, `pymongo`, `pydantic`, `python-dotenv`, `tailwindcss`, `vanilla-js`
+
+---
+
 ### ✨ Doctor Strange Hand Gestures
 
 > Create magical effects with hand gestures using computer vision
@@ -340,19 +401,24 @@ python main.py
 
 <div align="center">
 
-| Category             | Technologies                                                                                                                                                        |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Core**             | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)                                                                        |
-| **GUI**              | ![Tkinter](https://img.shields.io/badge/Tkinter-3776AB?style=flat)                                                                                                  |
-| **Computer Vision**  | ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white) ![MediaPipe](https://img.shields.io/badge/MediaPipe-0097A7?style=flat) |
-| **Database**         | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)                                                                     |
-| **Automation**       | ![PyAutoGUI](https://img.shields.io/badge/PyAutoGUI-3776AB?style=flat)                                                                                              |
-| **Image Processing** | ![Pillow](https://img.shields.io/badge/Pillow-3776AB?style=flat)                                                                                                    |
+| Category             | Technologies                                                                                                                                                                                                       |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Core**             | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)                                                                                                                       |
+| **Web Framework**    | ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)                                                                                                                    |
+| **Frontend**         | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) ![TailwindCSS](https://img.shields.io/badge/Tailwind-38B2AC?style=flat&logo=tailwind-css&logoColor=white) |
+| **GUI**              | ![Tkinter](https://img.shields.io/badge/Tkinter-3776AB?style=flat)                                                                                                                                                 |
+| **Computer Vision**  | ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white) ![MediaPipe](https://img.shields.io/badge/MediaPipe-0097A7?style=flat)                                                |
+| **Database**         | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)                                                                                                                    |
+| **Automation**       | ![PyAutoGUI](https://img.shields.io/badge/PyAutoGUI-3776AB?style=flat)                                                                                                                                             |
+| **Image Processing** | ![Pillow](https://img.shields.io/badge/Pillow-3776AB?style=flat)                                                                                                                                                   |
 
 </div>
 
 ### Key Libraries
 
+- `fastapi` - Modern web framework for building APIs
+- `uvicorn` - ASGI server for FastAPI
+- `pydantic` - Data validation using Python type hints
 - `tkinter` - GUI development
 - `opencv-python (cv2)` - Computer vision and video processing
 - `mediapipe` - Hand tracking and gesture recognition
@@ -372,6 +438,7 @@ These projects are perfect for:
 - 🎓 **Learning Python** - Hands-on examples of Python concepts
 - 🔧 **Automation** - Automate repetitive tasks
 - 🎨 **Multimedia Processing** - Work with images and videos
+- 🌐 **Web Development** - Build modern REST APIs and web apps
 - 🗃️ **Database Operations** - Learn MongoDB integration
 - 🤖 **AI Integration** - Explore AI-powered applications
 - 🛠️ **Utility Tools** - Practical everyday utilities
