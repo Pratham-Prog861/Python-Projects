@@ -4,7 +4,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Projects](https://img.shields.io/badge/Projects-9-orange.svg)
+![Projects](https://img.shields.io/badge/Projects-10-orange.svg)
 ![Status](https://img.shields.io/badge/Status-Active-success.svg)
 
 _A curated collection of Python projects showcasing automation, AI, multimedia processing, and practical utilities_
@@ -26,6 +26,7 @@ _A curated collection of Python projects showcasing automation, AI, multimedia p
 - [🎬 ASCII Video Player](#-ascii-video-player)
 - [🤖 AI Task Agent](#-ai-task-agent)
 - [🗄️ Python MongoDB Integration](#️-python-mongodb-integration)
+- [✨ Doctor Strange Hand Gestures](#-doctor-strange-hand-gestures)
 
 ---
 
@@ -293,18 +294,60 @@ python main.py
 
 ---
 
+### ✨ Doctor Strange Hand Gestures
+
+> Create magical effects with hand gestures using computer vision
+
+```bash
+📂 docter-strange/
+├── main.py
+├── functions.py
+├── config.json
+├── requirements.txt
+└── Models/
+    ├── inner_circles/
+    └── outer_circles/
+```
+
+**Features:**
+
+- Real-time hand tracking using MediaPipe
+- Gesture-based spell casting effects
+- Dynamic shield generation when hand is spread
+- Rotating magical circles overlay
+- Configurable visual effects and camera settings
+
+**How it works:**
+
+- **Spell Mode:** When fingers are close together, magical lines connect from wrist to fingertips
+- **Shield Mode:** When hand is spread wide, rotating magical circles appear creating a shield effect
+- Hand gesture ratios determine which effect is displayed
+
+**Run:**
+
+```bash
+cd docter-strange
+pip install -r requirements.txt
+python main.py
+# Press 'q' to quit
+```
+
+**Tech:** `opencv-python`, `mediapipe`, `numpy`
+
+---
+
 ## 🛠️ Tech Stack
 
 <div align="center">
 
-| Category             | Technologies                                                                                    |
-| -------------------- | ----------------------------------------------------------------------------------------------- |
-| **Core**             | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)    |
-| **GUI**              | ![Tkinter](https://img.shields.io/badge/Tkinter-3776AB?style=flat)                              |
-| **Computer Vision**  | ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white)    |
-| **Database**         | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white) |
-| **Automation**       | ![PyAutoGUI](https://img.shields.io/badge/PyAutoGUI-3776AB?style=flat)                          |
-| **Image Processing** | ![Pillow](https://img.shields.io/badge/Pillow-3776AB?style=flat)                                |
+| Category             | Technologies                                                                                                                                                        |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Core**             | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)                                                                        |
+| **GUI**              | ![Tkinter](https://img.shields.io/badge/Tkinter-3776AB?style=flat)                                                                                                  |
+| **Computer Vision**  | ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white) ![MediaPipe](https://img.shields.io/badge/MediaPipe-0097A7?style=flat) |
+| **Database**         | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)                                                                     |
+| **Automation**       | ![PyAutoGUI](https://img.shields.io/badge/PyAutoGUI-3776AB?style=flat)                                                                                              |
+| **Image Processing** | ![Pillow](https://img.shields.io/badge/Pillow-3776AB?style=flat)                                                                                                    |
 
 </div>
 
@@ -312,6 +355,7 @@ python main.py
 
 - `tkinter` - GUI development
 - `opencv-python (cv2)` - Computer vision and video processing
+- `mediapipe` - Hand tracking and gesture recognition
 - `pyautogui` - GUI automation
 - `spellchecker` - Spell checking functionality
 - `Pillow (PIL)` - Image manipulation
